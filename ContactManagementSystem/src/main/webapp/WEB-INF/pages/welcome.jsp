@@ -4,11 +4,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+
 </head>
 <body>
-<center>
-<h1>AS<br>Contact Management System</h1>
-</center>
+<h1>Welcome To <br>Contact Management System</h1>
 </body>
 </html>

@@ -1,5 +1,6 @@
 package com.demo.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,4 +46,15 @@ public class ContactDaoImpl implements ContactDao {
 		
 	}
 
+	@Override
+	public List<ContactTO> getAllContacts() {
+		System.out.println("in getAllContacts of contact dao impl");
+		String hql="from Contact";
+		List<Contact> contactlist=(List<Contact>)template.find(hql);
+		List<ContactTO> ctolist=new ArrayList<ContactTO>();
+		for(Contact c:contactlist) {
+			ctolist.add(new ContactTO(c.getCid(),c.getFname(),c.getLname(),c.getEmail(),c.getPhone()));
+			}
+		return ctolist;
+	}
 }

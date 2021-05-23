@@ -9,7 +9,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>AS</h1>
 <h2>Search Results</h2>
 <c:if test="${EDIT eq 'FALSE'}">
 <table>

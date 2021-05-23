@@ -29,9 +29,9 @@
 <tx:annotation-driven transaction-manager="txManager"/>
 <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-<property name="url" value="jdbc:mysql://localhost/springmvchibernatedb"></property>
+<property name="url" value="jdbc:mysql://localhost:3307/springmvchibernatedb"></property>
 <property name="username" value="root"></property>
-<property name="password" value="kiit"></property>
+<property name="password" value="0000"></property>
 </bean>
 <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 <property name="dataSource" ref="dataSource"></property>
@@ -64,4 +64,4 @@
 </bean>
 <bean id="contactcommand" class="com.demo.util.ContactCommandValidator"></bean>
 <bean id="searchcontactcommand" class="com.demo.util.SearchContactCommandValidator"></bean>
-</beans>
+</beans> 

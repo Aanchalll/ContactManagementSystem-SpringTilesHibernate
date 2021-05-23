@@ -27,4 +27,7 @@
 	<definition name="UpdateContactSuccessDef" extends="BaseDef">
 	<put-attribute name="BODY" value="/WEB-INF/pages/updateContactSuccess.jsp"/>
 	</definition>
+	<definition name="ShowAllContactDef" extends="BaseDef">
+	<put-attribute name="BODY" value="/WEB-INF/pages/showAllContact.jsp"/>
+	</definition>
 </tiles-definitions>

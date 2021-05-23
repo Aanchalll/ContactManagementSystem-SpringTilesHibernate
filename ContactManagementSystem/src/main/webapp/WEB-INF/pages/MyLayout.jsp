@@ -5,22 +5,32 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<style>
+table, td {
+  border: 1px solid black;
+  border-style=dotted;
+  padding: 1px;
+}
+/* table {
+  border-spacing: 1px;
+} */
+</style>
+
 </head>
-<body>
-<table width="99%" height="99%" bgcolor="#c3d599">
+<body id="myDIV">
+<table width="99%" height="99%" bgcolor="#e6ffff">
 <tr height="10%">
 <td colspan="2" align="center">
 <tiles:insertAttribute name="HEADER"/>
 </td>
 </tr>
-<tr height="85%">
-<td width="20%" valign="top">
+<tr height="100%">
+<td width="20%" align="left">
 <tiles:insertAttribute name="LMENU"/>
 </td>
-<td width="80%" valign="top">
-<tiles:insertAttribute name="BODY"/>
-</td>
+ <td  width="100%" align="justify">
+ <tiles:insertAttribute name="BODY"/>
+ </td>
 </tr>
 <tr height="5%">
 <td colspan="2" align="center">

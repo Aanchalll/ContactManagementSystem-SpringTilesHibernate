@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-</head>
+</head>  
 <body>
 <form:form action="addContactSubmit.do" commandName="contactCommand">
 <table>

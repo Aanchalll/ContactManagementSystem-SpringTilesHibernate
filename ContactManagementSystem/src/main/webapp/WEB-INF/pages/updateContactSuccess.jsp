@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>AS</h1>
-<h2>Your Info Has been saved Successfully</h2>
+<h2>Your information Has been updated saved Successfully</h2>
 </body>
 </html>

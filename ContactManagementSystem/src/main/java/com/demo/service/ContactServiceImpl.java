@@ -1,5 +1,7 @@
 package com.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -32,6 +34,11 @@ public class ContactServiceImpl implements ContactService{
 	public void updateContact(ContactTO cto) {
 		// TODO Auto-generated method stub
 		cdao.updateContact(cto);
+	}
+
+	@Override
+	public List<ContactTO> getAllContacts() {
+		return cdao.getAllContacts();
 	}
 
 }

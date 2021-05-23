@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +27,15 @@ public class ContactController {
 	SearchContactCommandValidator sccvalidator;
 	@Autowired
 	ContactService cs;
+	@RequestMapping(value="/showAllContact.do")
+	public String getAllContacts(HttpServletRequest req){
+		List<ContactTO> allcontacts=cs.getAllContacts();
+		if (allcontacts.size()==0) {
+			req.setAttribute("No_Contact_Found", "No Contacts Are There In Database.");
+		}
+		req.setAttribute("AllCONTACTS", allcontacts);
+		return "ShowAllContactDef";
+	}
 	
 	@RequestMapping(value = "/addContact.do")
 	public String showAddContactForm(Map<String,Object> map) {
@@ -101,7 +111,8 @@ public class ContactController {
 		String email=sc.getEmail();
 		ContactTO cto=cs.getContactByEmail(email);
 		if(cto==null) {
-			req.setAttribute("NOT_FOUND", "no record found");			
+			req.setAttribute("NOT_FOUND", "no record found");
+			return "SearchContactDef";
 		}else {
 			HttpSession session=req.getSession();
 			session.setAttribute("CTO", cto);

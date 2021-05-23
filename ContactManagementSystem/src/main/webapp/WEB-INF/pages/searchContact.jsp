@@ -8,7 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>AS</h1>
 <h2>Search Contact Form</h2>
 <font color="red" size=4>${NOT_FOUND}</font>
 <form:form action="searchContactSubmit.do" commandName="searchContactCommand">
